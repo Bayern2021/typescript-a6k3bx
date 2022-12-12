@@ -38,6 +38,13 @@ export class Tresor {
     * 3. Methode filter() auf das Array anwenden, um dieses neu aufzubauen
     * vgl. https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array/filter 
     */
+   addGegenstand(gegenstand: Gegenstand){
+     this.gegenstaende.push(gegenstand);
+   }
+   getGegenstand(id: number){
+     
+   }
+
 
    berechneGesamtwert(): number {
      let summeWerte: number = 0;
