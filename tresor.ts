@@ -41,9 +41,21 @@ export class Tresor {
    addGegenstand(gegenstand: Gegenstand){
      this.gegenstaende.push(gegenstand);
    }
-   getGegenstand(id: number){
-     
-   }
+   getGegenstand(givenid:number): Gegenstand {
+
+    let gegestand :Gegenstand = this.gegenstaende.find(g=>g.id===givenid);
+
+    if(gegestand===undefined){
+
+    throw new GegenstandNichtGefundenError(givenid);
+
+    }else{
+
+      return gegestand;
+
+    }
+
+  }
 
 
    berechneGesamtwert(): number {
