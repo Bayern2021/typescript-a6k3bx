@@ -8,7 +8,8 @@ export class Tresor {
    */
    private gegenstaende: Gegenstand[];
 
-   constructor() {
+   constructor(id: number,  wert: number) {
+     super(id,wert);
      this.gegenstaende = new Array();
    }
  
@@ -67,6 +68,7 @@ export class Tresor {
    //todo toString
    toString(): string {
      let text: string = "LISTE DER GEGENSTÄNDE";
+         
      //todo, vgl. forEach in berechneGesamtwert()
      return text;
    }
